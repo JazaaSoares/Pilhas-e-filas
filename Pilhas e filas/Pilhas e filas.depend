@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1725776848 source:c:\users\ana_j\onedrive\햞ea de trabalho\projetos c c++\ed\pilhas-e-filas\pilhas e filas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pilhaDeNumerosInteiros.h"
+	"filaDePilhas.h"
+
+1725823700 c:\users\ana_j\onedrive\햞ea de trabalho\projetos c c++\ed\pilhas-e-filas\pilhas e filas\pilhadenumerosinteiros.h
+	<stdio.h>
+	<stdlib.h>
+
+1725823700 c:\users\ana_j\onedrive\햞ea de trabalho\projetos c c++\ed\pilhas-e-filas\pilhas e filas\filadepilhas.h
+	"pilhaDeNumerosInteiros.h"
+
+1725823700 source:c:\users\ana_j\onedrive\햞ea de trabalho\projetos c c++\ed\pilhas-e-filas\pilhas e filas\filadepilhas.c
+	"filaDePilhas.h"
+
+1725823848 source:c:\users\ana_j\onedrive\햞ea de trabalho\projetos c c++\ed\pilhas-e-filas\pilhas e filas\pilhadenumerosinteiros.c
+	<stdio.h>
+	<stdlib.h>
+	"pilhaDeNumerosInteiros.h"
+

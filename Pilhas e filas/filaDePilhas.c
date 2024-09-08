@@ -22,7 +22,6 @@ struct Pilha {
     int tamanho;
 };
 
-// Inicializa a fila de pilhas
 FilaDePilhas* criaFila() {
     FilaDePilhas* fila = (FilaDePilhas*)malloc(sizeof(FilaDePilhas));
     fila->frente = NULL;
@@ -31,7 +30,6 @@ FilaDePilhas* criaFila() {
     return fila;
 }
 
-// Enfileira uma nova pilha
 void enfileirarPilha(FilaDePilhas* fila, Pilha* p) {
     NoFila* novo = (NoFila*)malloc(sizeof(NoFila));
     novo->pilha = p; //atribui pilha a um elemento novo
@@ -45,7 +43,6 @@ void enfileirarPilha(FilaDePilhas* fila, Pilha* p) {
     fila->tamanho++; //incrementa o tamanho da fila
 }
 
-// Desenfileira a pilha da frente
 Pilha* desenfileirarPilha(FilaDePilhas* fila) {
     if (fila->frente == NULL) { //verifica se a pilha está vazia
         printf("Erro: Fila de pilhas vazia!\n");
@@ -62,10 +59,9 @@ Pilha* desenfileirarPilha(FilaDePilhas* fila) {
     return pilha; // o que foi removido da fila
 }
 
-// Função que imprime a primeira pilha sem removê-la
 void primeiraPilha(FilaDePilhas* fila) {
     if (fila == NULL) {
-        printf("Erro: Fila de pilhas não inicializada!\n");
+        printf("Erro: Fila de pilhas nao inicializada!\n");
         return;
     }
 
@@ -82,7 +78,7 @@ void primeiraPilha(FilaDePilhas* fila) {
 
     Pilha* pilha = noFila->pilha;
     if (pilha == NULL) {
-        printf("Erro: Pilha não inicializada!\n");
+        printf("Erro: Pilha nao inicializada!\n");
         return;
     }
 
@@ -99,12 +95,11 @@ void primeiraPilha(FilaDePilhas* fila) {
     }
 }
 
-// Retorna o tamanho da fila
 int tamanhoFila(FilaDePilhas* fila) {
     return fila->tamanho;
 }
 
-// Verifica se a fila está vazia
+
 int filaVazia(FilaDePilhas* fila) {
     return fila->tamanho == 0;
 }
@@ -113,14 +108,15 @@ void menuFilaDePilhas(FilaDePilhas* f) {
     int opcao;
     Pilha* p;
     do {
-        printf("\nMenu Fila de Pilhas:\n");
+        printf("\n===== Menu Fila de Pilhas:=====\n");
         printf("1. Enfileirar Pilha\n");
         printf("2. Desenfileirar Pilha\n");
         printf("3. Mostrar Primeira Pilha\n");
-        printf("4. Verificar se a Fila está Vazia\n");
+        printf("4. Verificar se a Fila esta Vazia\n");
         printf("5. Mostrar Tamanho da Fila\n");
         printf("6. Sair\n");
-        printf("Escolha uma opção: ");
+        printf("\n============================\n");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         system("cls || clear");
 
@@ -144,7 +140,7 @@ void menuFilaDePilhas(FilaDePilhas* f) {
                 system("cls || clear");
                 break;
             case 4:
-                printf(filaVazia(f) ? "Fila de pilhas vazia\n" : "Fila de pilhas não está vazia\n");
+                printf(filaVazia(f) ? "Fila de pilhas vazia\n" : "Fila de pilhas nao está vazia\n");
                 system("pause");
                 system("cls || clear");
                 break;
@@ -159,7 +155,7 @@ void menuFilaDePilhas(FilaDePilhas* f) {
                 system("cls || clear");
                 break;
             default:
-                printf("Opção inválida!\n");
+                printf("Opção invalida!\n");
                 sleep(1);
                 system("cls || clear");
         }

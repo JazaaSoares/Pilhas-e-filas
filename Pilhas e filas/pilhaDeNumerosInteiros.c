@@ -13,7 +13,6 @@ struct Pilha {
 };
 
 
-// Inicializa a pilha
 Pilha* criaPilha() {
     Pilha* p = (Pilha*)malloc(sizeof(Pilha));
     p->topo = NULL;
@@ -21,7 +20,6 @@ Pilha* criaPilha() {
     return p;
 }
 
-// Empilha um elemento
 void empilhar(Pilha* p, int valor) {
     No* novo = (No*)malloc(sizeof(No));
     novo->valor = valor;
@@ -30,7 +28,6 @@ void empilhar(Pilha* p, int valor) {
     p->tamanho++;
 }
 
-// Desempilha um elemento
 int desempilhar(Pilha* p) {
     if (p->topo == NULL) {
         printf("Erro: Pilha vazia!\n");
@@ -44,7 +41,6 @@ int desempilhar(Pilha* p) {
     return valor; // retorna quem foi removido
 }
 
-// Retorna o topo da pilha sem removê-lo
 int topo(Pilha* p) {
     if (p->topo == NULL) {
         printf("Erro: Pilha vazia!\n");
@@ -53,12 +49,10 @@ int topo(Pilha* p) {
     return p->topo->valor;
 }
 
-// Retorna o tamanho da pilha
 int tamanhoPilha(Pilha* p) {
     return p->tamanho;
 }
 
-// Verifica se a pilha está vazia
 int pilhaVazia(Pilha* p) {
     return p->tamanho == 0;
 }
@@ -66,13 +60,14 @@ int pilhaVazia(Pilha* p) {
 void menuPilha(Pilha* p) {
     int opcao, valor;
     do {
-        printf("\nMenu Pilha:\n");
+        printf("\n======= Menu Pilha:========\n");
         printf("1. Empilhar\n");
         printf("2. Desempilhar\n");
         printf("3. Mostrar topo da pilha\n");
         printf("4. Verificar se esta vazia\n");
         printf("5. Mostrar tamanho\n");
         printf("6. Sair\n");
+        printf("\n===========================\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         system("cls || clear");
@@ -82,7 +77,7 @@ void menuPilha(Pilha* p) {
                 printf("Digite o valor: ");
                 scanf("%d", &valor);
                 empilhar(p, valor);
-                printf("Valor empilhado com sucesso!");
+                printf("Valor empilhado com sucesso!\n");
                 system("pause");
                 system("cls || clear");
                 break;
