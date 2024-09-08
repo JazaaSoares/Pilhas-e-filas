@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "pilhaDeNumerosInteiros.h"
+#include "filaDePilhas.h"
 
-int main()
-{
-    printf("Hello world!\n");
+int main() {
+    FilaDePilhas* fila = criaFila();
+    menuFilaDePilhas(fila);
     return 0;
 }

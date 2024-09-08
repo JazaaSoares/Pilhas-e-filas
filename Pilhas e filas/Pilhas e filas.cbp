@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Fila de Pilhas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Fila de Pilhas.h" />
+		<Unit filename="Pilha de Números Inteiros.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Pilha de Números Inteiros.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
